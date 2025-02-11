@@ -1,0 +1,17 @@
+.Businesses {
+  width: 70%;
+  margin: 0 auto;
+}
+.swiper_wrap {
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.swiper_wrap img {
+  width: 100%;
+
+  border-radius: 70px;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+}

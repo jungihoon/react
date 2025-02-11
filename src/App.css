@@ -1,0 +1,34 @@
+.App {
+}
+header {
+  background: salmon;
+}
+
+#content {
+  background-color: palegreen;
+  height: 700px;
+}
+
+footer {
+  background: thistle;
+  height: 200px;
+}
+
+nav a {
+  font-size: 1.5rem;
+  display: block;
+  text-decoration: none;
+  margin: 0 15px;
+  color: #333;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  width: 90%;
+}
+.active {
+  color: orange;
+}
