@@ -1,17 +1,61 @@
 .Businesses {
-  width: 70%;
+  position: relative;
+  max-width: 2000px;
   margin: 0 auto;
-}
-.swiper_wrap {
-  margin: 0 auto;
-  border-radius: 20px;
+  text-align: center;
 }
 
-.swiper_wrap img {
+.sec3-swiper-wrap {
   width: 100%;
-
-  border-radius: 70px;
+  margin: 35px 0;
+  padding: 0 13%;
   height: 560px;
-  object-fit: cover;
-  object-position: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.sec3-swiper-wrap .swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.sec3-swiper-wrap .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.sec3-swiper-wrap .swiper-slide .slide-item {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  border-radius: 70px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  will-change: height;
+}
+
+.sec3-swiper-wrap .swiper-slide-active .slide-item {
+  height: 100%;
+}
+
+.sec3-swiper-wrap .swiper-slide .slide-item .text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 9;
+}
+
+.sec3-swiper-wrap .swiper-slide .slide-item img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
 }
