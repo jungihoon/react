@@ -10,13 +10,13 @@ import Section7 from "./main/Section7";
 function Main() {
   return (
     <div>
-      {/* <Section1></Section1>
-      <Section2></Section2> */}
+      <Section1></Section1>
+      <Section2></Section2>
       <Section3></Section3>
-      {/* <Section4></Section4>
+      <Section4></Section4>
       <Section5></Section5>
       <Section6></Section6>
-      <Section7></Section7> */}
+      <Section7></Section7>
     </div>
   );
 }
