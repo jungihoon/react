@@ -1,8 +1,37 @@
 .Businesses {
   position: relative;
   max-width: 2000px;
-  margin: 0 auto;
+  margin: 500px auto;
   text-align: center;
+}
+
+.Businesses h3 {
+  color: #0166b3;
+  font-size: 2rem;
+  font-weight: 800;
+  max-width: 1400px;
+  margin: 0 13% 50px;
+  text-align: left;
+}
+
+.Businesses_txt {
+  max-width: 1400px;
+  margin: 0 13%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Businesses_txt span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #414141;
+}
+
+.Businesses_txt p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #5e5e5e;
+  margin-top: 44px;
 }
 
 .sec3-swiper-wrap {
@@ -24,7 +53,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
 }
 
 .sec3-swiper-wrap .swiper-slide .slide-item {
@@ -33,21 +61,31 @@
   height: 70%;
   border-radius: 70px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  will-change: height;
+  transition: all 0.5s ease-in-out;
 }
 
 .sec3-swiper-wrap .swiper-slide-active .slide-item {
   height: 100%;
+  transition: all 0.5s ease-in-out;
 }
 
 .sec3-swiper-wrap .swiper-slide .slide-item .text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   position: absolute;
   top: 30%;
   left: 10%;
   font-size: 3rem;
   color: #fff;
   z-index: 9;
+}
+
+.sec3-swiper-wrap .swiper-slide .slide-item .text span {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 300;
 }
 
 .sec3-swiper-wrap .swiper-slide .slide-item img {
@@ -57,5 +95,92 @@
   width: 100%;
   height: auto;
   transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 92px;
+  height: 92px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 8px 6px -6px #666;
+}
+.swiper-button-prev {
+  left: -36px;
+  right: auto;
+}
+.swiper-button-next {
+  right: -36px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #333;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 1440px) {
+  .sec3-swiper-wrap {
+    height: 420px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 70px;
+    height: 70px;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 2.4rem;
+  }
+
+  .Businesses_txt span {
+    font-size: 2.5rem;
+  }
+
+  .Businesses_txt p {
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .sec3-swiper-wrap {
+    height: 380px;
+  }
+  .Businesses_txt {
+    flex-direction: column;
+    text-align: left;
+  }
+  .Businesses h3 {
+    font-size: 1.5rem;
+  }
+
+  .Businesses_txt span {
+    font-size: 2rem;
+  }
+
+  .Businesses_txt p {
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sec3-swiper-wrap .swiper-slide .slide-item .text {
+    font-size: 2rem;
+  }
+  .sec3-swiper-wrap .swiper-slide .slide-item .text span {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sec3-swiper-wrap .swiper-container {
+    overflow: hidden;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 }
