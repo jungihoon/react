@@ -25,10 +25,12 @@ function Section3() {
           <SwiperSlide>
             <div className="slide-item">
               <div className="text">
-                ㅋ
+                여객수송
                 <span>
-                  ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ <br />
-                  ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+                  한국철도공사 여객사업본부는, 전국을 반나절 생활권으로 <br />
+                  이어주는 고속열차와 지역과 지역을 연결하는 일반열차를
+                  <br />
+                  통해 안전하고 편리한 여객 서비스를 제공합니다.
                 </span>
               </div>
               <img src={require("../../images/train1.jpg")} alt="" />
