@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ticket</title>
+    <style>
+      /* CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Remove default styles from links */
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Remove default list styles */
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      /* Normalize body font settings */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", Malgun Gothic, Arial, sans-serif;
+        -webkit-text-size-adjust: none;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #fff;
+        color: #333;
+      }
+
+      .section {
+        max-width: 2000px;
+        width: 100%;
+        height: 1050px;
+        margin: 0 auto;
+        background: url("bg1_1.png") 0 0 no-repeat;
+      }
+      /* ticket style */
+      .price-check-wrap {
+        display: flex;
+        width: 1400px;
+        margin: 0 auto;
+        padding: 100px 20px 0;
+        box-sizing: border-box;
+      }
+
+      .select-station {
+        display: flex;
+        width: 780px;
+        margin: 0 20px 0 0;
+        align-items: center;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+      }
+
+      .ticket-list {
+        width: 635px;
+      }
+
+      .ticket-item {
+        position: relative;
+        width: 100%;
+        max-width: 615px;
+        height: 325px;
+        margin: -60px 0 -100px 0;
+        overflow: hidden;
+        transition: height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .ticket-item a {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%); /* 세로 중앙 정렬 */
+        display: block;
+        width: calc(100% - 20px);
+        height: 202px; /* 기본 높이 */
+        margin: 0 auto;
+        padding: 20px 70px;
+        background-color: #0166b3;
+        border-radius: 20px;
+        box-sizing: border-box;
+        transition: height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), padding 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      } /*background 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)*/
+
+      .ticket-item a .seat-grade {
+        padding: 0 0 20px 0;
+        font-size: 35px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: -2.5px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .ticket-item a .price {
+        padding: 10px 0;
+        font-size: 35px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: -2px;
+      }
+
+      .ticket-item a .disc {
+        display: block;
+        width: 100%;
+        padding: 0;
+        font-size: 16px;
+        color: #fff;
+        text-align: right;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      /* hover */
+      .ticket-item.on {
+        width: 635px;
+        height: 325px;
+        margin: 60px 0 0 0;
+      }
+      .ticket-item.on:first-child {
+        margin: 0;
+      }
+
+      .ticket-item.on a {
+        width: 100%;
+        height: 325px;
+        padding: 50px 70px 80px;
+        background: url("bg_ticket_on.png") center center no-repeat;
+        background-size: 100% 325px;
+      }
+
+      .ticket-item.on a .seat-grade {
+        padding: 0 0 20px 0;
+        font-size: 35px;
+        font-weight: 700;
+        color: #024582;
+        letter-spacing: -2.5px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .ticket-item.on a .price {
+        padding: 10px 0;
+        font-size: 35px;
+        font-weight: 700;
+        color: #024582;
+        letter-spacing: -2px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .ticket-item.on a .disc {
+        width: 80%;
+        font-size: 16px;
+        color: #000;
+        padding: 20px 0 0 0;
+        white-space: inherit;
+        text-align: left;
+      }
+
+      /* 반응형 (1024px 이하) */
+      @media screen and (max-width: 1400px) {
+        .section {
+          max-width: 100%;
+        }
+        .price-check-wrap {
+          max-width: 100%;
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .select-station {
+          width: 100%;
+          margin: 0 0 30px 0;
+        }
+
+        .ticket-list {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .ticket-item {
+          flex-basis: 33.3%;
+          display: flex;
+        }
+        .ticket-item a {
+          padding: 20px 30px;
+        }
+
+        .ticket-item.on {
+          margin: 0;
+        }
+        .ticket-item.on a {
+          padding: 50px 40px 80px;
+        }
+        .ticket-item.on a .disc {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="price-check-wrap">
+        <div class="select-station">열차운임조회</div>
+        <ul class="ticket-list">
+          <li class="ticket-item">
+            <a href="#">
+              <div class="seat-grade">일반실</div>
+              <div class="price"><span>59,800</span>원</div>
+              <div class="disc">승차권은 온라인(코레일톡 앱)과 역, 네이버 기차예매, 카카오T, 승차권 판매 대리점에서 구매할 수 있습니다.</div>
+            </a>
+          </li>
+
+          <li class="ticket-item">
+            <a href="#">
+              <div class="seat-grade">우등실</div>
+              <div class="price"><span>59,800</span>원</div>
+              <div class="disc">* 운임 8,400 / 요금 3,000</div>
+            </a>
+          </li>
+
+          <li class="ticket-item">
+            <a href="#">
+              <div class="seat-grade">우등실</div>
+              <div class="price"><span>59,800</span>원</div>
+              <div class="disc">* 운임 8,400 / 요금 3,000</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ticketItems = document.querySelectorAll(".ticket-item");
+        const ticketList = document.querySelector(".ticket-list");
+
+        // 페이지 로드 시 첫 번째 항목에 on 클래스 적용
+        if (ticketItems.length > 0) {
+          ticketItems[0].classList.add("on");
+        }
+
+        // 각 항목에 마우스 오버 시 처리
+        ticketItems.forEach((item) => {
+          item.addEventListener("mouseenter", function () {
+            // 모든 항목에서 on 클래스 제거 후 현재 항목에 추가
+            ticketItems.forEach((i) => i.classList.remove("on"));
+            this.classList.add("on");
+          });
+        });
+
+        // 마우스가 전체 리스트 영역을 벗어나면 첫 번째 항목으로 복원
+        ticketList.addEventListener("mouseleave", function () {
+          ticketItems.forEach((i) => i.classList.remove("on"));
+          if (ticketItems.length > 0) {
+            ticketItems[0].classList.add("on");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
