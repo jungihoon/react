@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
 function Train() {
-  return <h2>Train</h2>;
-}
+    return (
+        <h2>열차소개</h2>   
+    );
+  }
 
-export default Train;
+  export default Train;

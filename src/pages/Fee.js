@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
 function Fee() {
-  return <h2>Fee</h2>;
-}
+    return (
+        <h2>열차운임표</h2>   
+    );
+  }
 
-export default Fee;
+  export default Fee;

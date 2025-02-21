@@ -3,6 +3,7 @@ import Company from "../pages/Company";
 import Business from "../pages/Business";
 import Train from "../pages/Train";
 import Fee from "../pages/Fee";
+import Place from "../pages/Place";
 
 const navpass = [
   {
@@ -24,6 +25,10 @@ const navpass = [
   {
     path: "/Fee",
     component: Fee,
+  },
+  {
+    path: "/Place",
+    component: Place,
   },
 ];
 

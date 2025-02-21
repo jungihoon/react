@@ -13,7 +13,7 @@ function Section3() {
       <p>Core Businesses</p>
       <div className="Businesses_txt">
         <span>전국을 잇는 철도</span>
-        <p>코레일은 철도 운송을 중심으로 다양한 사업을 통해 대한민국의 교통 혁신을 선도하고 있습니다. </p>
+        {/* <p>코레일은 철도 운송을 중심으로 다양한 사업을 통해 대한민국의 교통 혁신을 선도하고 있습니다. </p> */}
       </div>
       <div className="sec3-swiper-wrap">
         <Swiper
@@ -48,7 +48,7 @@ function Section3() {
                   통해 안전하고 편리한 여객 서비스를 제공합니다.
                 </span>
               </div>
-              <img src={require("../../images/train1.jpg")} alt="" />
+              <img src={require("../../images/business/train1.jpg")} alt="" />
             </div>
           </SwiperSlide>
 
@@ -62,7 +62,7 @@ function Section3() {
                   경의·중앙, 안산·과천, 분당·수인, 경춘, 일산, 경강, 동해, 서해선]을 <br /> 운영하고 있습니다.
                 </span>
               </div>
-              <img src={require("../../images/train1.jpg")} alt="" />
+              <img src={require("../../images/business/train2.jpg")} alt="" />
             </div>
           </SwiperSlide>
 
@@ -78,7 +78,7 @@ function Section3() {
                   진행하고 있습니다.
                 </span>
               </div>
-              <img src={require("../../images/train3.jpg")} alt="" />
+              <img src={require("../../images/business/train3.jpg")} alt="" />
             </div>
           </SwiperSlide>
 
@@ -91,7 +91,7 @@ function Section3() {
                   구축하여 글로벌 철도를 실현하고 있습니다.
                 </span>
               </div>
-              <img src={require("../../images/train1.jpg")} alt="" />
+              <img src={require("../../images/business/train1.jpg")} alt="" />
             </div>
           </SwiperSlide>
         </Swiper>
