@@ -47,6 +47,7 @@
   position: absolute;
   content: "";
   background: url(../images/business/business08.png) 50% 50% no-repeat;
+  background-size: cover;
   width: 100%;
   height: 300px;
 }
@@ -80,6 +81,53 @@
 .sub2 .business_top p {
   position: relative;
   margin: 50px auto;
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: -1.2px;
+  line-height: 1.6;
+}
+/* 탭메뉴 */
+.sub2 .css-1gsv261 {
+  border-bottom: none;
+}
+.css-1wxkzlj-MuiTabs-flexContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.css-s2t35c-MuiTabs-scroller {
+  width: 100%;
+}
+.css-1wxkzlj-MuiTabs-flexContainer {
+  margin: 100px auto 0;
+  width: 70%;
+  text-align: center;
+}
+.css-19kzrtu {
+  margin-top: 100px;
+}
+.css-1wxkzlj-MuiTabs-flexContainer button {
+  width: 40%;
+  font-size: 1.2rem;
+}
+
+/* table */
+.business_bot table {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-top: 2px solid #000;
+}
+.business_bot .table thead tr th {
+  padding: 10px 13px 13px;
+  border-right: 1px solid #c5c9d6;
+  border-bottom: 1px solid #c5c9d6;
+  background-color: #f2f2f2;
+  color: #000;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+}
+.business_bot .table thead tr th:last-child {
+  border-right: none;
+  border-left: 1px solid #c5c9d6;
 }
