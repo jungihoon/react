@@ -1,9 +1,9 @@
-import * as React from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import "../css/sub2.css";
+import React, { useState, useEffect } from "react";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -27,58 +27,48 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
+
 function Business() {
   const [value, setValue] = React.useState(0);
+
+  // json 땡겨오기
+  const [passenger, setPassenger] = useState([]);
+  useEffect(() => {
+    fetch("/Business_passenger.json", { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("네트워크 응답이 올바르지 않습니다.");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setPassenger(data);
+      })
+      .catch((error) => {
+        console.error("JSON 데이터를 불러오는 도중 에러 발생:", error);
+      });
+  }, []);
+
+  const [wide, setWide] = useState([]);
+  useEffect(() => {
+    fetch("/Business_wide.json", { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("네트워크 응답이 올바르지 않습니다.");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setWide(data);
+      })
+      .catch((error) => {
+        console.error("JSON 데이터를 불러오는 도중 에러 발생:", error);
+      });
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  const openReport = [
-    { open: "2025.01.01.", local: "동해선(영덕∼삼척) 개통", open2: "2024.11.30.", local2: "중부내륙선(충주∼문경) 개통" },
-    { open: "2024.11.02.", local: "서해선(서화성∼홍성) 개통", open2: "2021.12.31.", local2: "중부내륙선(부발~충주) 개통" },
-    { open: "2021.01.05.", local: "중앙선(원주~제천/도담~단촌)", open2: "2018.01.26.", local2: "동해선(포항~영덕) 개통" },
-    { open: "2017.12.22.", local: "강릉선 개통", open2: "2015.04.02.", local2: "호남고속선 · 동해선 개통" },
-    { open: "2010.11.01.", local: "경부고속철도 2단계구간 개통", open2: "2010.03.02.", local2: "KTX-산천 영업개시" },
-    { open: "2004.04.01.", local: "고속철도(KTX)개통", open2: "2004.03.24.", local2: "호남선복선전철" },
-    { open: "1997.02.20.", local: "영동선전철(영주~강릉)", open2: "1980.10.17.", local2: "충북선복선(조치원~봉양)" },
-    { open: "1975.12.05.", local: "영동선(철암~북평)	", open2: "1973.10.16.", local2: "태백선(제천~고한)" },
-    { open: "1968.02.07.", local: "경전선(진주~광양)	", open2: "1966.11.09.", local2: "경북선(영주~예천)" },
-    { open: "1966.01.19.", local: "고한선(예미~고한)", open2: "1965.09.18.", local2: "경인선(영등포~인천)" },
-    { open: "1963.08.20.", local: "서울교외선(능곡~의정부)	", open2: "1955.12.31.", local2: "영암선(영주~철암)" },
-    { open: "1942.04.01.", local: "중앙선(청량리~경주)	", open2: "1939.07.25.", local2: "경춘선(성동~춘천)" },
-    { open: "1936.12.16.", local: "전라선(익산~여수)	", open2: "1931.08.01.", local2: "장항선(천안~장항)" },
-    { open: "1929.12.25.", local: "충북선(조치원~충주)", open2: "1914.08.16.", local2: "경원선(용산~원산)" },
-    { open: "1914.01.11.", local: "호남선(대전~목포)", open2: "1906.04.03.", local2: "경의선(서울~신의주)" },
-    { open: "1905.01.01.", local: "경부선(서울~부산)", open2: "1899.09.18.", local2: "경인선(노량진~제물포)" },
-  ];
-
-  const openReport2 = [
-    { open: "2024. 12. 14.", local: "대경선(구미～경산)", open2: "2023. 12. 16.", local2: "경원선(동두천～연천)" },
-    { open: "2023. 08. 26.", local: "서해선(일산～대곡)", open2: "2023. 07. 01.", local2: "서해선(대곡～소사)" },
-    { open: "2021. 12. 28.", local: "동해선(일광～태화강)", open2: "2021. 12. 11.", local2: "경의선(임진강～도라산)" },
-    { open: "2021. 05. 01.", local: "서해선(소사～원시)", open2: "2020. 09. 12.", local2: "수인선(수원～한대앞)" },
-    { open: "2020. 03. 28.", local: "경의선(문산～임진강)", open2: "2017. 01. 21.", local2: "경강선(판교～여주)" },
-    { open: "2016. 02. 27.", local: "수인선(송도～인천)", open2: "2014. 12. 27.	", local2: "경의선(공덕～용산)" },
-    { open: "2013. 11. 30.", local: "분당선(망포～수원)", open2: "2012. 12. 15.", local2: "경의선(공덕～가좌)" },
-    { open: "2012. 12. 01.", local: "분당선(기흥～망포)", open2: "2012. 10. 06.", local2: "분당선(왕십리～선릉)" },
-    { open: "2012. 06. 30.", local: "수인선(오이도～송도)", open2: "2011. 12. 28.", local2: "분당선(보정～기흥)" },
-    { open: "2010. 12. 21.", local: "경춘선(망우～춘천)", open2: "2010. 02. 26.", local2: "병점기지선(병점～서동탄)" },
-    { open: "2009. 12. 23.", local: "중앙선(국수～용문)", open2: "2009. 07. 01.", local2: "경의선(서울～문산)" },
-    { open: "2008. 12. 29.", local: "중앙선(팔당～국수)", open2: "2008. 12. 15.	", local2: "장항선(천안～신창)" },
-    { open: "2007. 12. 27.", local: "중앙선(덕소～팔당)	", open2: "2006. 12. 15.", local2: "광명셔틀전동열차(금천구청~광명)" },
-    { open: "2006. 12. 15.", local: "경원선(의정부～소요산)", open2: "2005. 12. 21.", local2: "경인2복선(주안～동인천)" },
-    { open: "2005. 12. 16.", local: "중앙선(청량리～덕소)", open2: "2005. 01. 20.", local2: "경부2복선(병점～천안)" },
-    { open: "2004. 11. 26.", local: "분당선(오리～보정)", open2: "2003. 09. 03.", local2: "분당선(선릉～수서)" },
-    { open: "2003. 04. 30.", local: "경부2복선(수원～병점)", open2: "2002. 03. 15.", local2: "경인2복선(부평～주안)" },
-    { open: "2000. 07. 28.", local: "안산선(안산～오이도)", open2: "1999. 01. 29.", local2: "경인2복선(구로～부평)" },
-    { open: "1996. 01. 30.", local: "일산선(지축～대화)", open2: "1994. 09. 01.", local2: "분당선(수서～오리)" },
-    { open: "1994. 04. 01.", local: "과천선(인덕원～남태령)", open2: "1993. 01. 15.", local2: "과천선(금정～인덕원)" },
-    { open: "1988. 10. 25.", local: "안산선(금정～안산)", open2: "1986. 09. 02.", local2: "경원선(창동～의정부)" },
-    { open: "1985. 04. 25.", local: "경원선(광운대～창동)", open2: "1978. 12. 09.", local2: "경원선(용산～청량리)" },
-    { open: "1974. 08. 15.", local: "경원선(청량리～광운대)	", open2: "1974. 08. 15.", local2: "경인선(구로～인천)" },
-    { open: "1974. 08. 15.", local: "경부2복선(서울～수원)", open2: "-", local2: "-" },
-  ];
 
   return (
     <section className="sub2">
@@ -98,6 +88,7 @@ function Business() {
             <Tab label="해외사업" {...a11yProps(3)} />
           </Tabs>
         </Box>
+
         {/* 여객사업 */}
         <CustomTabPanel value={value} index={0}>
           <div className="business_top">
@@ -225,7 +216,7 @@ function Business() {
                 </tr>
               </thead>
               <tbody>
-                {openReport.map((item, index) => (
+                {passenger.map((item, index) => (
                   <tr key={index}>
                     <td>{item.open}</td>
                     <td>{item.local}</td>
@@ -372,7 +363,7 @@ function Business() {
                 </tr>
               </thead>
               <tbody>
-                {openReport2.map((item, index) => (
+                {wide.map((item, index) => (
                   <tr key={index}>
                     <td>{item.open}</td>
                     <td>{item.local}</td>
@@ -411,7 +402,7 @@ function Business() {
               비용을 절감할 수 있으며, 탄소 배출량이 적어 친환경적인 운송 수단으로 주목받고 있습니다.
             </p>
             <div className="business_midcon ">
-              <img src={require("../images/business/image 47.png")} alt="" />
+              <img src={require("../images/business/business_mid08.jpg")} alt="" />
               <p>
                 <strong>대량 화물 운송을 통한 물류 효율성 향상</strong>
 
@@ -442,7 +433,7 @@ function Business() {
             </div>
 
             <div className="business_midcon flex_row">
-              <img src={require("../images/business/business_mid03.png")} alt="" />
+              <img src={require("../images/business/business_mid10.png")} alt="" />
               <p>
                 <strong>친환경 물류 시스템 구축</strong>
 
@@ -473,7 +464,7 @@ function Business() {
             </div>
 
             <div className="business_midcon">
-              <img src={require("../images/business/business_mid04.jpg")} alt="" />
+              <img src={require("../images/business/business_mid09.jpg")} alt="" />
               <p>
                 <strong>철도 중심의 스마트 물류 체계 구축</strong>
 
@@ -517,7 +508,7 @@ function Business() {
                 </tr>
               </thead>
               <tbody>
-                {openReport2.map((item, index) => (
+                {wide.map((item, index) => (
                   <tr key={index}>
                     <td>{item.open}</td>
                     <td>{item.local}</td>
