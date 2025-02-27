@@ -50,6 +50,14 @@
   width: 100%;
   height: 600px;
 }
+.sub2 .business_top::after {
+  position: absolute;
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
 .sub2 .top2::before {
   background: url(../images/business/business08.png) 50% 50% no-repeat;
 }
@@ -82,15 +90,18 @@
   border-radius: 50%;
   z-index: -1;
 }
-
 .sub2 .business_top p {
+  margin-top: 5%;
+}
+.sub2 .business_top p em {
   position: relative;
   margin: 50px auto;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: -1.2px;
   line-height: 1.6;
   color: #fff;
+  z-index: 1;
 }
 
 /* 탭메뉴 */
@@ -228,7 +239,8 @@
 
 @media screen and (max-width: 1280px) {
   /* 탭 안에 비주얼 */
-  .sub2 .business_top::before {
+  .sub2 .business_top::before,
+  .sub2 .business_top::after {
     height: 400px;
   }
   .sub2 .business_top span {
@@ -238,10 +250,13 @@
     width: 70px;
     height: 70px;
   }
-  .sub2 .business_top p {
+  .sub2 .business_top p em {
     font-size: 1rem;
   }
   /* 본문 */
+  .business_mid {
+    padding: 0 10%;
+  }
   .business_mid h3 {
     font-size: 2rem;
   }
@@ -253,12 +268,27 @@
 
 @media screen and (max-width: 1024px) {
   /* 탭안에 비주얼 */
-  .sub2 .business_top p {
-    font-size: 0.8rem;
+  .sub2 .business_top p em {
+    font-size: 1rem;
   }
   /* 본문 */
+  .business_mid .business_midcon,
+  .business_mid .flex_row {
+    flex-direction: column;
+  }
   .business_mid .business_midcon p strong {
     font-size: 1.5rem;
+  }
+  .business_mid .business_midcon p {
+    margin: 100px 0 0 0;
+  }
+  .business_mid p ul,
+  .business_mid .flex_row ul {
+    margin: 90px 0 0 20px;
+  }
+  /* json tb */
+  .business_bot {
+    padding: 0 10%;
   }
 }
 
@@ -266,6 +296,18 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* ㅂㅈㅇ */
+  .sub2 .business_top span::before {
+    background: none;
+  }
+  .sub2 .business_top span {
+    font-size: 1.8rem;
+  }
+  /*  본문  */
+  .business_mid,
+  .business_bot {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 640px) {
