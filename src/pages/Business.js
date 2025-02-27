@@ -31,7 +31,8 @@ function a11yProps(index) {
 function Business() {
   const [value, setValue] = React.useState(0);
 
-  // json 땡겨오기
+  // json 땡겨오기 //
+  // 여객
   const [passenger, setPassenger] = useState([]);
   useEffect(() => {
     fetch("/Business_passenger.json", { cache: "no-store" })
@@ -49,6 +50,7 @@ function Business() {
       });
   }, []);
 
+  // 광역
   const [wide, setWide] = useState([]);
   useEffect(() => {
     fetch("/Business_wide.json", { cache: "no-store" })
@@ -60,6 +62,24 @@ function Business() {
       })
       .then((data) => {
         setWide(data);
+      })
+      .catch((error) => {
+        console.error("JSON 데이터를 불러오는 도중 에러 발생:", error);
+      });
+  }, []);
+
+  // 물류
+  const [coupang, setCoupang] = useState([]);
+  useEffect(() => {
+    fetch("/Business_coupang.json", { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("네트워크 응답이 올바르지 않습니다.");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setCoupang(data);
       })
       .catch((error) => {
         console.error("JSON 데이터를 불러오는 도중 에러 발생:", error);
@@ -85,7 +105,6 @@ function Business() {
             <Tab label="여객사업" {...a11yProps(0)} />
             <Tab label="광역사업" {...a11yProps(1)} />
             <Tab label="물류수송" {...a11yProps(2)} />
-            <Tab label="해외사업" {...a11yProps(3)} />
           </Tabs>
         </Box>
 
@@ -231,7 +250,7 @@ function Business() {
 
         {/* 광역사업 */}
         <CustomTabPanel value={value} index={1}>
-          <div className="business_top">
+          <div className="business_top top2">
             <div className="business_intro_txt">
               <span>
                 광역·도시철도 사업의 국내 최대 운영자로서 <br />총 15개의 광역철도 노선을 운영하고 있습니다.
@@ -378,19 +397,17 @@ function Business() {
 
         {/* 물류사업 */}
         <CustomTabPanel value={value} index={2}>
-          <div className="business_top">
+          <div className="business_top top3">
             <div className="business_intro_txt">
               <span>
                 기존 운송사업에서 벗어나 사업영역 확장을 통해 <br />
                 글로벌 종합물류기업으로의 도약을 진행하고 있습니다.
               </span>
               <p>
-                연간 수송량은 21,257톤 수준이며, 화물 영업거리는 3,104km, 일일 181회 화물열차 운행과 75개 화물취급역을 운영하고 있습니다.(24년 말
-                기준)
                 <br />
-                물류사업본부는 친환경 정부정책에 부응하여 고효율·친환경적인 화물열차 운행으로 국가물류비를 절감하고 정부의 탄소중립 정책에 적극
-                부응하겠으며,
-                <br /> 철저한 국제화물열차 운행 준비를 통해 미래 대륙철도 시대를 대비하겠습니다.
+                연간 수송량은 21,257톤 수준이며, 화물 영업거리는 3,104km, 일일 181회 화물열차 운행과 75개 화물취급역을 운영하고 <br />
+                있습니다. (24년 말기준) <br /> 물류사업본부는 친환경 정부정책에 부응하여 고효율·친환경적인 화물열차 운행으로 국가물류비를 절감하고
+                정부의 탄소중립 정책에 적극 부응하겠으며, 철저한 국제화물열차 운행 준비를 통해 미래 대륙철도 시대를 대비하겠습니다.
               </p>
             </div>
           </div>
@@ -508,7 +525,7 @@ function Business() {
                 </tr>
               </thead>
               <tbody>
-                {wide.map((item, index) => (
+                {coupang.map((item, index) => (
                   <tr key={index}>
                     <td>{item.open}</td>
                     <td>{item.local}</td>
@@ -519,9 +536,6 @@ function Business() {
               </tbody>
             </table>
           </div>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={3}>
-          해외사업
         </CustomTabPanel>
       </Box>
     </section>

@@ -51,33 +51,34 @@ export default function ComTab() {
 
   return (
   
-    <Box>
-        {/* 헤드 이미지 추가 */}
-        <Box sx={{ width: '100%', height: '400px', overflow: 'hidden', objectFit: 'cover'  }}>
-        <img 
-          src={sub1_bg} // 원하는 이미지 경로 설정
-          alt="Company Header"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-        />
-        <h3>공사소개</h3>
+    <section className='sub1'>
+     
+      <div className='sub1_top'>
+        <strong>공사소개</strong>
+      </div>
+         <div className='title'>
+            <h3>공사소개</h3>
+            <p>Station Location</p>
+          </div>
+      <Box>
+        <Box sx={{ margin:'100px auto', textAlign:'center'} }>
+          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}} label="경영가치체계" {...Company(0)} />
+            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}}  label="우리들의 이야기" {...Company(1)} />
+            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}}  label="찾아오시는 길" {...Company(2)} />
+          </Tabs>
+        </Box>
+        <CustomTabPanel value={value} index={0}>
+          <Management />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+          <Ceo />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={2}>
+          <Map />
+        </CustomTabPanel>
       </Box>
-      <Box sx={{ margin:'100px auto', width: '70%', textAlign:'center'} }>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}} label="경영가치체계" {...Company(0)} />
-          <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}}  label="우리들의 이야기" {...Company(1)} />
-          <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}}  label="찾아오시는 길" {...Company(2)} />
-        </Tabs>
-      </Box>
-      <CustomTabPanel value={value} index={0}>
-        <Management />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <Ceo />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        <Map />
-      </CustomTabPanel>
-    </Box>
+    </section>
   
 
   );

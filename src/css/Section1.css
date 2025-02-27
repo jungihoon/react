@@ -21,13 +21,14 @@
 }
 
 .visual .visualBox p {
-    font-size: 4vw;
+    font-size: 4.5vw;
     font-weight: 800;
     color: #fff;
     position: absolute;
     top: 30%;
     left: 10%;
     z-index: 10;
+    text-shadow: 3px 4px 5px #0000008c;
 }
 
 .visual .visualBox img{
@@ -52,7 +53,7 @@
 .visual .swiper-container-horizontal>.swiper-pagination-bullets,
 .visual .swiper-pagination-custom,
 .visual .swiper-pagination-fraction{
-    bottom: 15%;
+    bottom: 13%;
     left: 50%;
     transform: translateX(-50%);
     background: #ffffff38;
@@ -63,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 1.2%;
     backdrop-filter: blur(10px);
 }
 
@@ -77,8 +78,8 @@
 
 .visual .swiper-pagination-bullet-active{background: #fff;}
 .visual .swiper-button-next{right: 100px;}
-.visual .swiper-button-prev{left: 40%; top: 83%;}
-.visual .swiper-button-next {right: 40%;top: 83%;}
+.visual .swiper-button-prev{left: 40%; top: 84.5%;}
+.visual .swiper-button-next {right: 40%;top: 84.5%;}
 
 .visual .swiper-button-prev::after, 
 .visual .swiper-button-next::after{
@@ -88,48 +89,82 @@
 @media screen and (max-width:1280px) {
     .visual .swiper-button-prev {
             left: 36%;
-        }
+            top: 89%;
+    }
     .visual .swiper-button-next {
         right: 36%;
+        top: 89%;
     }
     .visual .swiper-container-horizontal>.swiper-pagination-bullets,
     .visual .swiper-pagination-custom,
     .visual .swiper-pagination-fraction{
         width: 20%;
+        bottom: 8.6%;
     }
 }
       
 
 @media screen and (max-width:1024px) {
- 
-
-}
-
-@media screen and (max-width:768px) {
-    .visual .swiper-button-prev {left: 30%;}
-    
-    .visual .swiper-button-next {right: 30%;}
-
-    .visual .swiper-container-horizontal>.swiper-pagination-bullets,
-    .visual .swiper-pagination-custom,
-    .visual .swiper-pagination-fraction {width: 30%;}
-
-}
-
-@media screen and (max-width:640px) {
-
     .visual .swiper-button-prev {
-        left: 25%;
+        left: 36%;
+        top: 89%;
     }
 
     .visual .swiper-button-next {
-        right: 25%;
+        right: 36%;
+        top: 89%;
     }
 
     .visual .swiper-container-horizontal>.swiper-pagination-bullets,
     .visual .swiper-pagination-custom,
     .visual .swiper-pagination-fraction {
-        width: 35%;
+        width: 20%;
+        bottom: 8%;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+
+    .visual .visualBox p{
+        top: 45%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .visual .swiper-button-prev {
+        display: none;
+    }
+    .visual .swiper-button-next {
+        display: none;
+    }
+    .visual .swiper-container-horizontal>.swiper-pagination-bullets,
+    .visual .swiper-pagination-custom,
+    .visual .swiper-pagination-fraction {width: 20%;}
+
+}
+
+@media screen and (max-width:640px) {
+    .visual .visualBox img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .visual .visualBox img {
+        height: 500px;
+    }
+    .visual .visualBox p{
+        top: 33%;
+        left: 4%;
+        font-size: 8vw;
+    }
+
+    .visual .swiper-container-horizontal>.swiper-pagination-bullets,
+    .visual .swiper-pagination-custom,
+    .visual .swiper-pagination-fraction{
+        width: 30%;
+        bottom: 9%;
     }
 }
 

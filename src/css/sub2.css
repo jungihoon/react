@@ -45,10 +45,16 @@
 .sub2 .business_top::before {
   position: absolute;
   content: "";
-  background: url(../images/business/business08.png) 50% 50% no-repeat;
+  background: url(../images/business/business09.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 600px;
+}
+.sub2 .top2::before {
+  background: url(../images/business/business08.png) 50% 50% no-repeat;
+}
+.sub2 .top3::before {
+  background: url(../images/business/business10.jpg) 50% 50% no-repeat;
 }
 .sub2 .business_top .business_intro_txt {
   position: relative;
@@ -216,4 +222,48 @@
 }
 .business_bot .offer .tdBox {
   transform: translateY(20px);
+}
+
+/* 미디어쿼리 */
+
+@media screen and (max-width: 1280px) {
+  /* 탭 안에 비주얼 */
+  .sub2 .business_top::before {
+    height: 400px;
+  }
+  .sub2 .business_top span {
+    font-size: 2rem;
+  }
+  .sub2 .business_top span::before {
+    width: 70px;
+    height: 70px;
+  }
+  .sub2 .business_top p {
+    font-size: 1rem;
+  }
+  /* 본문 */
+  .business_mid h3 {
+    font-size: 2rem;
+  }
+
+  .business_mid > p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* 탭안에 비주얼 */
+  .sub2 .business_top p {
+    font-size: 0.8rem;
+  }
+  /* 본문 */
+  .business_mid .business_midcon p strong {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 640px) {
 }

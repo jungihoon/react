@@ -1,5 +1,5 @@
 /* 임시 */
-.sub4 .sub_visual { height: 450px; background: url(../images/fee/fee_visual.png); display: flex; justify-content: center; align-items: center; font-size: 3rem; color: #fff; font-weight: 600;}
+.sub4 .sub_visual { height: 400px; background: url(../images/fee/fee_visual.png); display: flex; justify-content: center; align-items: center; font-size: 3rem; color: #fff; font-weight: 600;}
 
 .sub4 .content {padding: 100px 0;}
 .sub4 .content .inner {width: 80%; margin: 0 auto;}
@@ -21,7 +21,7 @@
 .sub4 .content .inner .tck_box .tck_lst div:nth-of-type(5) strong {color: #000; font-size: 1.2em; font-weight: 500;}
 
 .sub4 .inner .select_dep fieldset {border-radius: 20px; border: 2px solid #0166b3;}
-.sub4 .css-1tlcqt-MuiAutocomplete-root {width: 160px;}
+.sub4 .css-1tlcqt-MuiAutocomplete-root {width: 180px;}
 .sub4 .css-113d811-MuiFormLabel-root-MuiInputLabel-root {display: none;}
 .sub4 .css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {font-size: 1.2em; font-weight: 600;}
 

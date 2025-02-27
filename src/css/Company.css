@@ -1,3 +1,24 @@
-.sub1_bg{background: url("../images/sub1/sub1_bg.jpg") no-repeat; background-position: center; object-fit: cover;
-width: 100%; height: auto;}
 .css-1wxkzlj-MuiTabs-flexContainer { display: flex; justify-content: space-around;}
+.css-1xe9pqz {margin: 100px auto; width: 100%;  text-align: center;}
+
+.sub1_top {
+    width: 100%;
+    height: 400px;
+    background: url("../images/sub1/sub1_bg.jpg") center/cover no-repeat;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+} 
+.sub1 .sub1_top strong {
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 250px;
+    left: 0;
+}
+.sub1 .title{text-align: center;margin-top: 150px;}
+.sub1 .title h3{font-size: 3rem;}
+.sub1 .title p{font-size: 1.5rem; color: #0166B3; font-weight: 600;}

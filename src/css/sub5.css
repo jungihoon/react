@@ -3,7 +3,7 @@
 .sub5 .sub5_top {
     width: 100%;
     height: 400px;
-    background: url(../images/train/sub_top.png) center/cover no-repeat;
+    background: url(../../public/sub5/sub_top.jpg) center/cover no-repeat;
     position: relative;
     top: 0;
     left: 50%;
@@ -68,7 +68,7 @@
 
 /* 검색창 */
 .sub5 .serch_box {
-    width: max-content;
+    width: 100%;
     margin: 150px auto 150px;
 }
 
@@ -94,6 +94,7 @@
     background: #0166B3;
     color: #fff;
     cursor: pointer;
+    border-radius: 30px;
     transition: all .3s ease-out;
 }
 
@@ -120,11 +121,11 @@
 }
 
 .sub5 .search_name span{
-    background: #f4f4f4;
+    background: #fbfbfb;
     padding: 1% 3%;
     border-radius: 50px;
     font-weight: 500;
-    border: 1px solid #c1c1c1;
+    border: 1px solid #e3e3e3;
 }
 
 /* 공통 */
@@ -141,6 +142,10 @@
     position: relative;
     width: 100%;
     height: auto;
+}
+
+.sub5 .output_map{
+    margin-top: 50px;
 }
 
 
@@ -328,7 +333,7 @@
     .sub5 .search_name{
         margin: 0;
         position: relative;
-        bottom: -90px;
+        top: -110px;
         justify-content: center;
         gap: 20px;
     }
@@ -340,7 +345,7 @@
 
     .sub5 .serch_box #btn {
         width: 100%;
-        margin: 10px auto 150px;
+        margin: 0 auto 150px;
     }
 
     
