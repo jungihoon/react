@@ -306,9 +306,36 @@
   /*  본문  */
   .business_mid,
   .business_bot {
-    padding: 0;
+    padding: 24px;
   }
 }
 
 @media screen and (max-width: 640px) {
+}
+@media screen and (max-width: 360px) {
+  .sub2 .business_top {
+    margin: 0 auto 150px;
+  }
+  .sub2 .business_top::before,
+  .sub2 .business_top::after {
+    height: 200px;
+  }
+  .sub2 .business_top span {
+    display: none;
+    font-size: 1rem;
+    margin-top: 35px;
+  }
+  .sub2 .business_top p em {
+    display: none;
+  }
+  .business_mid h3 {
+    font-size: 1.5rem;
+  }
+
+  .business_bot {
+    overflow-x: scroll;
+  }
+  .business_bot .offer {
+    width: 1000px;
+  }
 }

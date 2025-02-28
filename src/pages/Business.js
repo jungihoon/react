@@ -95,7 +95,7 @@ function Business() {
       <div className="visual">
         <img src={require("../images/business/business06.jpg")} alt="" />
         <div className="visual_tit">
-          <strong>주요사업</strong>
+          <h3 className="hidden">주요사업</h3>
         </div>
       </div>
       <h2 className="hidden">주요사업</h2>
@@ -112,10 +112,7 @@ function Business() {
         <CustomTabPanel value={value} index={0}>
           <div className="business_top">
             <div className="business_intro_txt">
-              <span>
-                지역과 지역을 연결하는 일반열차를 통해 <br />
-                안전하고 편리한 여객 서비스를 제공합니다.
-              </span>
+              <span>지역과 지역을 연결하는 일반열차를 통해 안전하고 편리한 여객 서비스를 제공합니다.</span>
               <p>
                 <em>
                   2004년 4월 1일, 세계에서 다섯 번째로 개통한 고속열차는 ‘속도혁명, 경제혁명’을 예고하며 대한민국을 2시간대 생활권으로 만들었습니다.
