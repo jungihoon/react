@@ -6,6 +6,7 @@ function Content() {
 
     return (
         <article id="content">
+            <h2 className='hidden'>본문콘텐츠</h2>
             <Routes>
             {
                 routes.map((route, index) => {

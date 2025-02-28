@@ -15,7 +15,8 @@ function Section4() {
             <div className='train_inner'>
                 <div className='train_wrap'>
                     <div className="top">
-                        <h2 className="small_text">Train Introduction</h2>
+                        <h3 className='hidden'>열차소개</h3>
+                        <p className="small_text">Train Introduction</p>
                         <div className="big_text">여행의 즐거움,<br />코레일과 함께 완성하다</div>
                         <p className="explain_text">빠르고 편리한 이동을 위한 열차 정보를 소개합니다. 고속열차부터 광역열차까지, 다양한 열차를 한눈에 확인해 보세요.</p>
                     </div>
@@ -27,7 +28,7 @@ function Section4() {
                             onClick={() => handleClick("ticket01")}
                         >
                             <div className="ticket_num">01</div>
-                            <h3 className="ticket_name">고속열차<span><RiArrowRightUpLine /></span></h3>
+                            <p className="ticket_name">고속열차<span><RiArrowRightUpLine /></span></p>
                             <p className="ticket_en_text">High-Speed Train</p>
 
                             <div className="ticket_ex">
@@ -45,7 +46,7 @@ function Section4() {
                             onClick={() => handleClick("ticket02")}
                         >
                             <div className="ticket_num">02</div>
-                            <h3 className="ticket_name">일반열차<span><RiArrowRightUpLine /></span></h3>
+                            <p className="ticket_name">일반열차<span><RiArrowRightUpLine /></span></p>
                             <p className="ticket_en_text">Regular Train</p>
 
                             <div className="ticket_ex">
@@ -63,7 +64,7 @@ function Section4() {
                             onClick={() => handleClick("ticket03")}
                         >
                             <div className="ticket_num">03</div>
-                            <h3 className="ticket_name">광역열차<span><RiArrowRightUpLine /></span></h3>
+                            <p className="ticket_name">광역열차<span><RiArrowRightUpLine /></span></p>
                             <p className="ticket_en_text">Commuter Train</p>
 
                             <div className="ticket_ex">

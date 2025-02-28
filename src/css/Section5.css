@@ -2,20 +2,20 @@
 .vr .inner {width: 70%; margin: 0 auto;}
 .vr .text1{color: #0166B3; font-size: 1.3rem; margin-bottom: 10px; font-weight: 700; margin-bottom: 15px;}
 .vr .text2{font-size: 2.5rem; line-height: 3.5rem; font-weight: 700; margin-bottom: 100px; color: #333;}
-.vr .test>div{background: url("../images/vr/Train.png") no-repeat; width: 100%; height: 35vh; margin-left: 300px;}
+.vr .VrTour>div{background: url("../images/vr/Train.png") no-repeat; width: 100%; height: 35vh; margin-left: 300px;}
 
 
 
-.vr .test{display: flex; justify-content: flex-end; position: relative;} 
-.vr .test ul {position: absolute; width: 100%; height: 100%;}
-.vr .test ul li a { display: inline-block; font-size: 1.2rem; color: #333; font-weight: 650; display: flex; justify-content: space-around; position: relative; }
-.vr .test ul li:first-child a,.vr .test ul li:nth-child(3) a { margin-left: 25px;}
-.vr .test ul li:nth-child(2) a { margin-left: 41px;}
-.vr .test ul li a span {background: #005BAC; color: #fff; padding: 4px; border-radius: 50%; 
+.vr .VrTour{display: flex; justify-content: flex-end; position: relative;} 
+.vr .VrTour ul {position: absolute; width: 100%; height: 100%;}
+.vr .VrTour ul li a { display: inline-block; font-size: 1.2rem; color: #333; font-weight: 650; display: flex; justify-content: space-around; position: relative; }
+.vr .VrTour ul li:first-child a,.vr .VrTour ul li:nth-child(3) a { margin-left: 25px;}
+.vr .VrTour ul li:nth-child(2) a { margin-left: 41px;}
+.vr .VrTour ul li a span {background: #005BAC; color: #fff; padding: 4px; border-radius: 50%; 
     display: flex; align-items: center; justify-content: center; border: 1px solid #fff;
     transition: all .5s ease-out;}
 
-.vr .test ul li{ position: absolute; border: 1px solid #fff;
+.vr .VrTour ul li{ position: absolute; border: 1px solid #fff;
     font-size: 1rem; background:#fff; color: #050D1B; 
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
     text-align: center; width: 200px; height: 35px; font-weight: 500;
@@ -26,7 +26,7 @@
 /* 호버 */
 
 
-.vr .test ul li:hover a span{
+.vr .VrTour ul li:hover a span{
     background: #fff;
     color: #005BAC;
     transition: all .5s ease-out;
@@ -34,7 +34,7 @@
 }
 
 
-.vr .test .map_point{ position: absolute; top: 33px; left: -22px; width: 40px; height: 40px; z-index: 0;}
+.vr .VrTour .map_point{ position: absolute; top: 33px; left: -22px; width: 40px; height: 40px; z-index: 0;}
      
         @keyframes expand {
            0% {
@@ -47,7 +47,7 @@
            }
          }
      
-.vr .test .map_point span{
+.vr .VrTour .map_point span{
         display: block;
         position: absolute;
         top: -7px;
@@ -59,9 +59,9 @@
         opacity: 1;
         animation: expand 1s cubic-bezier(0.22, 0.61, 0.36, 0.5) infinite;}
      
-.vr .test .map_point span:nth-of-type(2){animation-delay: 0.6s; background: #065f9b2a;}
+.vr .VrTour .map_point span:nth-of-type(2){animation-delay: 0.6s; background: #065f9b2a;}
      
-.vr .test .map_point em{
+.vr .VrTour .map_point em{
         display: block;
         position: absolute;
         top: 5px;
@@ -73,21 +73,21 @@
     
 
     
-    .vr .test ul li:nth-of-type(1){left: 500px; bottom: 250px;}
-    .vr .test ul li:nth-of-type(2){left: 750px; bottom: 220px;}
-    .vr .test ul li:nth-of-type(3){left: 1100px; bottom: 250px;}
+    .vr .VrTour ul li:nth-of-type(1){left: 500px; bottom: 250px;}
+    .vr .VrTour ul li:nth-of-type(2){left: 750px; bottom: 220px;}
+    .vr .VrTour ul li:nth-of-type(3){left: 1100px; bottom: 250px;}
 
     @media (max-width: 1280px) {
-        .vr .test ul li:nth-of-type(3){display: none;}
+        .vr .VrTour ul li:nth-of-type(3){display: none;}
         .vr .text2{font-size: 2.2rem; line-height: 3.3rem;}
-        .vr .test>div {
+        .vr .VrTour>div {
             margin-left: 200px;
         }
 
-        .vr .test ul li:nth-of-type(1) {
+        .vr .VrTour ul li:nth-of-type(1) {
             left: 400px;
         }
-        .vr .test ul li:nth-of-type(2) {
+        .vr .VrTour ul li:nth-of-type(2) {
             left: 650px;
         }
         
@@ -95,26 +95,26 @@
 
     @media (max-width: 1024px) {
         .vr .text2{line-height: 3.1rem;}
-        .vr .test>div {
+        .vr .VrTour>div {
             margin-left: 150px;
         }
 
-        .vr .test ul li:nth-of-type(1) {
+        .vr .VrTour ul li:nth-of-type(1) {
             left: 350px;
         }
     }
 
 
     @media (max-width: 900px) {
-        .vr .test ul li:nth-of-type(2){display: none;}
+        .vr .VrTour ul li:nth-of-type(2){display: none;}
     }
 
     @media (max-width: 768px) {
         .vr .inner {width: 90%;}
-        .vr .test>div {
+        .vr .VrTour>div {
             margin-left: 50px;
         }
-        .vr .test ul li:nth-of-type(1) {
+        .vr .VrTour ul li:nth-of-type(1) {
             left: 250px;
         }
     }

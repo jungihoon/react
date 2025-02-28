@@ -31,8 +31,10 @@ function Fee() {
 
     return (
         <section className='sub4'>
-            <h2>열차운임표</h2>
-            <div className='sub_visual'></div>
+            <h2 className='hidden'>열차운임표</h2>
+            <div className='sub_visual'><strong>열차운임표</strong></div>
+            
+            <div class="title"><h3>열차운임표</h3><p>Train Fare Table</p></div>
 
             <div className='content'>
                 <div className='inner'>

@@ -1,5 +1,10 @@
 /* 임시 */
 .sub4 .sub_visual { height: 400px; background: url(../images/fee/fee_visual.png); display: flex; justify-content: center; align-items: center; font-size: 3rem; color: #fff; font-weight: 600;}
+.sub4 .sub_visual strong {font-size: 2rem; position: absolute; width: 100%; text-align: center; top: 250px;}
+
+.sub4 .title{text-align: center;margin-top: 150px;}
+.sub4 .title h3{font-size: 3rem;}
+.sub4 .title p{font-size: 1.5rem; color: #0166B3; font-weight: 600;}
 
 .sub4 .content {padding: 100px 0;}
 .sub4 .content .inner {width: 80%; margin: 0 auto;}

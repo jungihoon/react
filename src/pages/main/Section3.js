@@ -62,7 +62,7 @@ function Section3() {
                   경의·중앙, 안산·과천, 분당·수인, 경춘, 일산, 경강, 동해, 서해선]을 <br /> 운영하고 있습니다.
                 </span>
               </div>
-              <img src={require("../../images/business/train2.jpg")} alt="" />
+              <img src={require("../../images/business/train2.png")} alt="" />
             </div>
           </SwiperSlide>
 
@@ -79,19 +79,6 @@ function Section3() {
                 </span>
               </div>
               <img src={require("../../images/business/train3.jpg")} alt="" />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="slide-item">
-              <div className="text">
-                해외사업
-                <span>
-                  한국철도공사 해외남북철도사업단은, 철도 기술력과 전문성을 <br /> 바탕으로 해외 철도사업을 수행하고, 글로벌 철도 네트워크를 <br />
-                  구축하여 글로벌 철도를 실현하고 있습니다.
-                </span>
-              </div>
-              <img src={require("../../images/business/train1.jpg")} alt="" />
             </div>
           </SwiperSlide>
         </Swiper>
