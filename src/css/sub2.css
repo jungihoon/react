@@ -105,6 +105,12 @@
 }
 
 /* 탭메뉴 */
+.sub2 .css-162tvoi {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  justify-content: center;
+}
 .sub2 .css-1gsv261 {
   border-bottom: none;
 }
@@ -192,6 +198,7 @@
 .business_bot {
   max-width: 1400px;
   margin: 0 auto;
+  text-align: center;
 }
 .business_bot table {
   margin: 30px 0 50px;
@@ -216,6 +223,9 @@
 
 .business_bot .offer {
   width: 100%;
+  min-width: 360px;
+  max-width: 100%;
+
   border-collapse: collapse;
   margin-top: 20px;
 }
@@ -313,6 +323,15 @@
 @media screen and (max-width: 640px) {
 }
 @media screen and (max-width: 360px) {
+  .sec3-swiper-wrap {
+    height: 200px;
+  }
+  .sec3-swiper-wrap .swiper-slide-active .slide-item {
+    height: 200px;
+  }
+  .sec3-swiper-wrap .swiper-slide .slide-item .text span {
+    display: none;
+  }
   .sub2 .business_top {
     margin: 0 auto 150px;
   }
@@ -336,6 +355,6 @@
     overflow-x: scroll;
   }
   .business_bot .offer {
-    width: 1000px;
+    /* width: 1000px; */
   }
 }

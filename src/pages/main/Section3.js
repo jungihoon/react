@@ -30,6 +30,15 @@ function Section3() {
               slidesPerView: 1,
               spaceBetween: 400,
             },
+
+            360: {
+              slidesPerView: 1,
+              spaceBetween: 400,
+            },
+            160: {
+              slidesPerView: 1,
+              spaceBetween: 400,
+            },
           }}
           modules={[Navigation, Pagination]}
           slidesPerView={"auto"}
