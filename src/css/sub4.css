@@ -26,12 +26,17 @@
 .sub4 .content .inner .tck_box .tck_lst div:nth-of-type(5) strong {color: #000; font-size: 1.2em; font-weight: 500;}
 
 .sub4 .inner .select_dep fieldset {border-radius: 20px; border: 2px solid #0166b3;}
+/* 로컬 */
 .sub4 .css-1tlcqt-MuiAutocomplete-root {width: 180px;}
 .sub4 .css-113d811-MuiFormLabel-root-MuiInputLabel-root {display: none;}
 .sub4 .css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {font-size: 1.2em; font-weight: 600;}
 
+/* build */
+.sub4 .css-1niro10 {display: none;}
+.sub4 .MuiAutocomplete-root {width: 180px;}
+.sub4 .css-1hdoajr .MuiOutlinedInput-root .MuiAutocomplete-input {font-size: 1.2em; font-weight: 600;}
+
 @media (max-width: 1024px) {
-    .sub4 .content .inner {}
     .sub4 .content .inner .tck_box .tck_lst {padding: 20px 30px;}
     .sub4 .content .inner .tck_box .tck_lst {flex-wrap: wrap;}
     .sub4 .content .inner .tck_box .tck_lst div:nth-of-type(1) {width: 60px;}

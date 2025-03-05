@@ -96,3 +96,38 @@
 @media screen and (max-width:640px) {
 
 }
+
+@media screen and (max-width:360px) {
+    .voc dl dt {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+    }
+
+    .voc dl dd {
+        font-size: 1.3rem;
+    }
+
+    .voc .box1 {
+        height: 80px;
+    }
+
+    .voc .icon {
+        width: 5rem;
+    }
+
+    footer .top {
+        flex-direction: row;
+    }
+
+    footer .familysiteWrap {
+        flex-direction: column;
+    }
+
+    footer .rule {
+        flex-direction: column;
+        gap: 10px;
+        font-size: .89rem;
+        align-items: center;
+    }
+
+}

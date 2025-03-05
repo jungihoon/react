@@ -3,6 +3,7 @@ import "../../css/Section6.css";
 import logo from "../../images/fee/logo_ktx.png";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { Autocomplete, TextField } from "@mui/material";
+import {NavLink} from 'react-router-dom';
 
 function Section6() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -63,10 +64,10 @@ function Section6() {
       <h3 className="hidden">열차운임조회</h3>
       <div className="inner">
         <div className="left">
-          <strong>
+          <strong data-aos="fade-up">
             <img src={logo} alt="로고" /> 열차운임조회
           </strong>
-          <p>출발지와 도착지를 입력하고 열차운임을 조회하세요.</p>
+          <p data-aos="fade-up"> 출발지와 도착지를 입력하고 열차운임을 조회하세요.</p>
           <div className="search_box">
             <div>
               <span>출발지</span>
@@ -102,7 +103,7 @@ function Section6() {
                 <li>
                   {type}
                   <span>
-                    <RiArrowRightUpLine />
+                    <NavLink to="./Fee"><RiArrowRightUpLine /></NavLink>
                   </span>
                 </li>
                 <li>

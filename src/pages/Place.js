@@ -111,14 +111,13 @@ function Place() {
   return (
     <section className="sub5">
       <div className='sub5_top'>
-        <strong>역위치정보</strong>
       </div>
       
       <div className='sub5_wrap'>
         <div className="station">
           <div className='title'>
             <h3>역 위치정보</h3>
-            <p>Station Location</p>
+            <p>Station Information</p>
           </div>
         
           <div className="serch_box">
@@ -129,7 +128,7 @@ function Place() {
                   <div className='search_name'>
                     <span>서울역</span>
                     <span>부산역</span>
-                    <span>대구역</span>
+                    <span>동대구역</span>
                     <span>광주송정역</span>
                   </div>
               </div>

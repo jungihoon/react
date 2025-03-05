@@ -73,11 +73,22 @@
 
 
 @media screen and (max-width:650px){
+    .box{width: 95%;}
     .company .text1{font-size: 1.1rem;}
     .company .text2{font-size: 2rem;}
     .box .box_right ul{height: 10vh; width: 145px;}
     .box_right ul li dl dd:nth-of-type(2){display: none;}
     .box_right ul li dl dd:nth-of-type(1){font-size: 1.2rem;}
     .box .box_right ul.on li dl dd:nth-of-type(1){font-size: 1.2rem;}
+}
+
+
+@media screen and (max-width:550px){
+    .box_right ul li dl dt {font-size: .8rem;}
+    .box .box_right{display: flex; flex-direction: column;}
+    .box .box_right ul { width: 95%;}
+}
+
+@media screen and (max-width:360px){
     
 }

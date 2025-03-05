@@ -49,7 +49,7 @@ function Management(){  //Topics 페이지
                     </div>
                 </div>
             </div>
-            {/* <div className="management-goals">
+            <div className="management-goals">
                 <div className="title"> <AiOutlineCheck /><span>전략과제</span></div>
                 <div className="goal-container">
                     <div className="goal-box outline">
@@ -57,31 +57,31 @@ function Management(){  //Topics 페이지
                             <li>디지털통합<br />안전관리</li>
                             <p className='line'></p>
                             <li>중대재해 예방 및 <br /> 안전 문화 확산</li>
-                            <p className='line'></p>
                         </ul>
                     </div>
                     <div className="goal-box solid">
-                        <p>자립경영을 위한<br /> 재무건전성 제고</p>
-                        <p className='line'></p>
-                        <ul>
-                            <li>・부채비율</li>
-                            <li>・영업손익</li>
+                         <ul>
+                            <li>운송순익<br />극대화</li>
+                            <p className='line'></p>
+                            <li>신성장사업<br />경쟁력 확보</li>
                         </ul>
                     </div>
                     <div className="goal-box outline">
                         <ul>
-                            <li>・고객만족도</li>
-                            <li>・디지털 서비스 달성률</li>
+                            <li>디지털<br />서비스 혁신</li>
+                            <p className='line'></p>
+                            <li>미래융합교통<br />플랫폼 구축</li>
                         </ul>
                     </div>
                     <div className="goal-box solid">
                         <ul>
-                            <li>・ESG경영지수</li>
-                            <li>・조직문화지수</li>
+                            <li>ESG 책임경영<br />내재화</li>
+                            <p className='line'></p>
+                            <li>스마트근무환경 및<br />상호존중 문화 조성</li>
                         </ul>
                     </div>
                 </div>
-            </div> */}
+            </div>
           
         </div>
     )

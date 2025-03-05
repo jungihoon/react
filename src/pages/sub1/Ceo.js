@@ -7,7 +7,8 @@ import '../../css/sub1/Ceo.css'
         <h3 className='hidden'>경영가치체계</h3>
         <div className='ceo_strong'>
              <strong>"오늘도 코레일을 이용해 주셔서 고맙습니다"</strong>
-           </div>
+        </div>
+        <div className='addText'><span>철도는 한 세기 훌쩍 넘는 세월 동안 우리의 일상과 같이하며, 매일 출퇴근길 국민의 발이 되고, 때로는 여행의 동반자로 함께하고 있습니다.</span></div>
         <div className='ceo_box'>
           <div className='ceo_img'></div>
           <div className='ceo_right'>

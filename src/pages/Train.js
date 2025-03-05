@@ -18,19 +18,23 @@ function Train() {
         const tabMenu = document.querySelector('.tab_menu');
         const header = document.querySelector('header');
     
-        if (tabMenu && header) {
-            setOriginalOffset(tabMenu.offsetTop);
-        }
+        if (!tabMenu || !header) return;
+    
+        const initialOffset = tabMenu.offsetTop; // 초기 tabMenu 위치 저장
     
         const handleScroll = () => {
-            if (!header || !tabMenu) return;
-    
             const headerHeight = header.offsetHeight;
             const scrollY = window.scrollY;
     
-            if (scrollY >= originalOffset - headerHeight) {
+            if (scrollY === 0) {
+                setIsFixed(false);
+                setOffsetValue(-80); // 초기값으로 유지
+                return;
+            }
+    
+            if (scrollY >= initialOffset - headerHeight) {
                 setIsFixed(true);
-                setOffsetValue(-160); 
+                setOffsetValue(-160);
             } else {
                 setIsFixed(false);
                 setOffsetValue(-290);
@@ -41,15 +45,15 @@ function Train() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [originalOffset]);
+    }, []);
+
+    
     return (
  
       
 
             <section className="trainsub">
-                <div className='trainsub_top'>
-                    <strong>열차소개</strong>
-                </div>
+                <div className='trainsub_top'></div>
 
                 <div className='trainsub_inner'>
                     <div className='trainsub_wrap'>

@@ -8,7 +8,7 @@
 }
 
 .train .train_inner {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -217,7 +217,7 @@
 
   @media (max-width: 1280px) {
     .train {
-        height: 950px;
+        height: 1050px;
     }
     .train .top .big_text {
         font-size: 2.2rem;
@@ -322,6 +322,39 @@
     }
 
     .code_img{display: none;}
+}
+
+
+
+@media (max-width: 360px) {
+
+    .train {
+        height: 1050px;
+    }
+
+    .train .train_inner {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .train .top .big_text {
+        font-size: 1.8rem;
+    }
+
+    .train .top .small_text {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .ticket_name {
+        font-size: 1rem;
+    }
+
+    .ticket_name span {
+        font-size: 4vw;
+    }
+ 
+
 }
 
 

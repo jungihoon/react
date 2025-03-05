@@ -94,17 +94,18 @@ function Business() {
     <section className="sub2">
       <div className="visual">
         <img src={require("../images/business/business06.jpg")} alt="" />
-        <div className="visual_tit">
-          <h3 className="hidden">주요사업</h3>
-        </div>
       </div>
       <h2 className="hidden">주요사업</h2>
-      <Box sx={{ width: "100%", margin: "0 auto" }}>
+      <div className="title">
+        <h2>주요사업</h2>
+        <p>Main Business</p>
+      </div>
+      <Box sx={{ margin: "0 auto", textAlign: "center" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs value={value} onChange={handleChange}>
-            <Tab label="여객사업" {...a11yProps(0)} />
-            <Tab label="광역사업" {...a11yProps(1)} />
-            <Tab label="물류수송" {...a11yProps(2)} />
+            <Tab sx={{ width: "40%", fontSize: "1.2rem", fontWeight: "500" }} label="여객사업" {...a11yProps(0)} />
+            <Tab sx={{ width: "40%", fontSize: "1.2rem", fontWeight: "500" }} label="광역사업" {...a11yProps(1)} />
+            <Tab sx={{ width: "40%", fontSize: "1.2rem", fontWeight: "500" }} label="물류수송" {...a11yProps(2)} />
           </Tabs>
         </Box>
 
@@ -112,7 +113,10 @@ function Business() {
         <CustomTabPanel value={value} index={0}>
           <div className="business_top">
             <div className="business_intro_txt">
-              <span>지역과 지역을 연결하는 일반열차를 통해 안전하고 편리한 여객 서비스를 제공합니다.</span>
+              <span>
+                지역과 지역을 연결하는 일반열차를 통해 <br />
+                안전하고 편리한 여객 서비스를 제공합니다.
+              </span>
               <p>
                 <em>
                   2004년 4월 1일, 세계에서 다섯 번째로 개통한 고속열차는 ‘속도혁명, 경제혁명’을 예고하며 대한민국을 2시간대 생활권으로 만들었습니다.

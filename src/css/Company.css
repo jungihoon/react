@@ -10,15 +10,12 @@
     left: 50%;
     transform: translateX(-50%);
 } 
-.sub1 .sub1_top strong {
-    font-size: 2rem;
-    color: #fff;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 250px;
-    left: 0;
-}
-.sub1 .title{text-align: center;margin-top: 150px;}
+
+
+.sub1 .title{text-align: center; margin-top: 150px;}
 .sub1 .title h3{font-size: 3rem;}
 .sub1 .title p{font-size: 1.5rem; color: #0166B3; font-weight: 600;}
+
+.css-1cuoivm{padding-top:100px}
+.css-hzcega-MuiTabs-list{justify-content: center;}
+.css-162tvoi{justify-content: center;}

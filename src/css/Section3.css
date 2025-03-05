@@ -35,6 +35,10 @@
   margin-top: 44px;
 }
 
+.sec3Icon{display: flex; width: 60%;}
+.sec3Icon svg{font-size: 2rem; padding: 15px 15px 0; color: #fff; transition: all .5s ease-out;}
+.sec3Icon svg:hover{color: #0166B3;}
+
 .sec3-swiper-wrap {
   width: 100%;
   margin: 35px 0;
@@ -183,6 +187,7 @@
 @media screen and (max-width: 1024px) {
   .Businesses>p{width: 80%;}
   .Businesses_txt {width: 80%;}
+  .sec3Icon svg{font-size: 2rem; padding: 10px 10px 0;}
   .sec3-swiper-wrap .swiper-slide .slide-item {
     height: 60%;
   }
@@ -218,9 +223,8 @@
 @media screen and (max-width: 768px) {
   .Businesses>p{width: 90%;}
   .Businesses_txt {width: 90%;}
-  .Businesses_txt p {
-    display: none;
-  }
+  .Businesses_txt p {display: none;}
+  .sec3Icon svg{font-size: 1.5rem; padding: 5px 5px 0;}
   .sec3-swiper-wrap .swiper-slide .slide-item {
     /* height: 0; */
     transition: none;

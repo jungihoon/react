@@ -35,6 +35,21 @@
 }
 
 /* 본문 */
+.sub2 .title h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 150px;
+}
+.sub2 .css-1cuoivm {
+  padding: 0;
+}
+.sub2 .title p {
+  font-size: 1.5rem;
+  color: #0166b3;
+  font-weight: 600;
+  text-align: center;
+}
 .sub2 .business_top {
   position: relative;
   display: flex;
@@ -93,7 +108,7 @@
 .sub2 .business_top p {
   margin-top: 5%;
 }
-.sub2 .business_top p em {
+.sub2 .business_top .business_intro_txt p em {
   position: relative;
   margin: 50px auto;
   font-size: 1.5rem;
@@ -119,21 +134,22 @@
   justify-content: space-around;
 }
 
-.css-s2t35c-MuiTabs-scroller {
+.sub2 .css-s2t35c-MuiTabs-scroller {
   width: 100%;
 }
-.css-1wxkzlj-MuiTabs-flexContainer {
+.sub2 .css-1wxkzlj-MuiTabs-flexContainer {
   margin: 100px auto 0;
   width: 70%;
   text-align: center;
 }
-.css-19kzrtu {
+.sub2 .css-19kzrtu {
   margin-top: 100px;
 }
-.css-1wxkzlj-MuiTabs-flexContainer button {
+.sub2 .css-1wxkzlj-MuiTabs-flexContainer button {
   width: 33%;
   font-size: 1.2rem;
 }
+.sub2 .title{margin-bottom: 100px;}
 
 /* 주절주절 */
 .business_mid {
@@ -167,12 +183,13 @@
 }
 .business_mid p ul {
   list-style: disc;
+  text-align: initial;
   margin: 125px 0 0 20px;
 }
 .business_mid .flex_row ul {
   margin-top: 150px;
 }
-.business_mid .business_midcon p > span {
+.business_mid .business_midcon p em {
   display: block;
   font-size: 1.2rem;
   font-weight: 600;
@@ -223,7 +240,7 @@
 
 .business_bot .offer {
   width: 100%;
-  min-width: 360px;
+  /* min-width: 360px; */
   max-width: 100%;
 
   border-collapse: collapse;
@@ -329,9 +346,13 @@
   .sec3-swiper-wrap .swiper-slide-active .slide-item {
     height: 200px;
   }
+  .sec3-swiper-wrap .swiper-slide .slide-item .text {
+    top: 65%;
+  }
   .sec3-swiper-wrap .swiper-slide .slide-item .text span {
     display: none;
   }
+
   .sub2 .business_top {
     margin: 0 auto 150px;
   }
@@ -354,7 +375,20 @@
   .business_bot {
     overflow-x: scroll;
   }
-  .business_bot .offer {
-    /* width: 1000px; */
+  .business_mid .business_midcon span {
+    display: none;
+  }
+  .business_mid .business_midcon em {
+    text-align: left;
+  }
+  .business_bot .table thead tr th {
+    font-size: 0.8rem;
+  }
+  .business_bot .offer td {
+    font-size: 0.5rem;
+  }
+  .business_bot .offer th,
+  .business_bot .offer td {
+    padding: 0;
   }
 }
