@@ -149,7 +149,6 @@
   width: 33%;
   font-size: 1.2rem;
 }
-.sub2 .title{margin-bottom: 100px;}
 
 /* 주절주절 */
 .business_mid {
@@ -223,6 +222,7 @@
 }
 
 .business_bot .table thead tr th {
+  width: 25%;
   padding: 10px 13px 13px;
   border-right: 1px solid #c5c9d6;
   border-bottom: 1px solid #c5c9d6;
@@ -277,7 +277,7 @@
     width: 70px;
     height: 70px;
   }
-  .sub2 .business_top p em {
+  .sub2 .business_top .business_intro_txt p em {
     font-size: 1rem;
   }
   /* 본문 */
@@ -382,7 +382,7 @@
     text-align: left;
   }
   .business_bot .table thead tr th {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .business_bot .offer td {
     font-size: 0.5rem;
@@ -390,5 +390,9 @@
   .business_bot .offer th,
   .business_bot .offer td {
     padding: 0;
+  }
+  .css-hzcega-MuiTabs-list {
+    width: 80%;
+    margin: 0 auto;
   }
 }

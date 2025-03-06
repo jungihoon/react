@@ -136,7 +136,6 @@ function Footer() {
                         <span>대전광역시 동구 중앙로 240 &nbsp;&nbsp;&nbsp;</span>
                         <span>고객센터 : 1588-7788(이용료 : 발신자부담) &nbsp;&nbsp;&nbsp;</span>
                         <span>대표전화 : 042-472-5000 &nbsp;&nbsp;&nbsp;</span>
-                        <span>대표전화 : 042-472-5000 &nbsp;&nbsp;&nbsp;</span>
                         <span>팩스 : 02-361-8385 &nbsp;&nbsp;&nbsp;</span>
                         <p>COPYRIGHT ⓒ KOREA RAILROAD. ALL RIGHTS RESERVED. </p>
                     </div>

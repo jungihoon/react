@@ -444,3 +444,9 @@
     }
 
 }
+
+@media screen and (max-width:360px){
+    .sub5 .search_name{
+        display: none;
+    }
+}

@@ -40,7 +40,7 @@ const TaskDisplay = ({station}) => {
 
     return (
         <div className="output_box">
-            <h3 className='staName'>{sta.stationName}</h3>
+            <h4 className='staName'>{sta.stationName}</h4>
 
             <div className='output_map'>
                 <p className='subtitle'>출입구정보</p>

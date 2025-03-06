@@ -41,7 +41,7 @@ section, div {box-sizing: border-box;}
 .fee .inner .right>li.on li:nth-of-type(2)::after {display: block; transform: scaleX(.9);}
 .fee .inner .right>li.on li:nth-of-type(3) {display: block; font-size: 1rem;}
 
-/* comboBox custom */
+/* comboBox custom local*/
 .fee .inner .left .search_box>div fieldset {border-radius: 30px; border: 2px solid #0166b3;}
 .css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root {padding: 7px 20px;}
 .css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-endAdornment {right: 20px !important;}
@@ -49,6 +49,15 @@ section, div {box-sizing: border-box;}
 .css-1tlcqt-MuiAutocomplete-root {width: 80%;}
 .css-1tlcqt-MuiAutocomplete-root>div button {margin-left: 10px;}
 .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1tlcqt-MuiAutocomplete-root .MuiOutlinedInput-root {padding: 4px 30px;}
+
+/* comboBox custom build*/
+.MuiAutocomplete-root {width: 80%;}
+.MuiAutocomplete-root>div button {margin-left: 10px;}
+.MuiAutocomplete-root .MuiOutlinedInput-root {padding: 4px 30px;}
+.MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-endAdornment {right: 20px !important;}
+.MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {font-size: 1.5em;}
+.MuiAutocomplete-root .uiInputBase-input {padding-left: 20px;}
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1hdoajr .MuiOutlinedInput-root {padding: 2px; padding-left: 20px;}
 
 @media (max-width: 1280px) {
     .fee .inner {gap: 8%;}

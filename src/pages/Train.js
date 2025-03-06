@@ -59,7 +59,7 @@ function Train() {
                     <div className='trainsub_wrap'>
                         <div className="title_area">
                             <h2>열차소개</h2>
-                            <p>train Introduction</p>
+                            <p>Train Introduction</p>
                         </div>
 
               
