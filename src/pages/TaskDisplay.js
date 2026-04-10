@@ -4,52 +4,40 @@ import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import KakaoMap from './sub5/kakaoMap';
 
-const TaskDisplay = ({station}) => {
-   
-    const sta = station;
-   
-
-    // itemData 배열 정의
+const TaskDisplay = ({ station }) => {
     const itemData = [
         {
-            img: `./sub5/${sta.place1img}`,
-            title: sta.place1name,
-            author: `위치 : ${sta.place1address}\n 안내전화 : ${sta.place1tel}`,
-            rows: 2,
-            cols: 2,
-            featured: true,
+            img: `./sub5/${station.place1img}`,
+            title: station.place1name,
+            author: `위치 : ${station.place1address}\n 안내전화 : ${station.place1tel}`,
         },
         {
-            img: `./sub5/${sta.place2img}`,
-            title: sta.place2name,
-            author: `위치 : ${sta.place2address}\n 안내전화 : ${sta.place2tel}`,
+            img: `./sub5/${station.place2img}`,
+            title: station.place2name,
+            author: `위치 : ${station.place2address}\n 안내전화 : ${station.place2tel}`,
         },
         {
-            img: `./sub5/${sta.place3img}`,
-            title: sta.place3name,
-            author: `위치 : ${sta.place3address}\n 안내전화 : ${sta.tel}`,
+            img: `./sub5/${station.place3img}`,
+            title: station.place3name,
+            author: `위치 : ${station.place3address}\n 안내전화 : ${station.tel}`,
         },
         {
-            img: `./sub5/${sta.place4img}`,
-            title: sta.place4name,
-            author: `위치 : ${sta.place4address}\n 안내전화 : ${sta.tel}`,
+            img: `./sub5/${station.place4img}`,
+            title: station.place4name,
+            author: `위치 : ${station.place4address}\n 안내전화 : ${station.tel}`,
         },
- 
     ];
 
 
     return (
         <div className="output_box">
-            <h4 className='staName'>{sta.stationName}</h4>
+            <h4 className='staName'>{station.stationName}</h4>
 
             <div className='output_map'>
                 <p className='subtitle'>출입구정보</p>
-
-                {/* 카카오 맵 컴포넌트 */}
                 <div className="map_container">
                     <KakaoMap address={station.address} />
                 </div>
-
             </div>
 
             <div className='output_info'>
@@ -64,9 +52,9 @@ const TaskDisplay = ({station}) => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{sta.address}</td>
-                            <td>{sta.tel}</td>
-                            <td>{sta.line}</td>
+                            <td>{station.address}</td>
+                            <td>{station.tel}</td>
+                            <td>{station.line}</td>
                         </tr>
                     </tbody>
                 </table>

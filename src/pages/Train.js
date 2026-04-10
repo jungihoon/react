@@ -11,7 +11,6 @@ import commuterTrain from '../images/train/commutertrain01.png';
 
 function Train() {
     const [isFixed, setIsFixed] = useState(false);
-    const [originalOffset, setOriginalOffset] = useState(0);
     const [offsetValue, setOffsetValue] = useState(-80);
     
     useEffect(() => {

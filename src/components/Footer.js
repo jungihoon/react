@@ -10,26 +10,14 @@ import { FaAnglesUp } from "react-icons/fa6";
 
 function Footer() {
 
-    //Topmenu
-    const [upDown, setUpDown] = useState(false); //false(위)/true(아래)
-
-    const handleScroll = () => {
-        //console.log(window.scrollY);
-        // window.scrollY -> 스크롤의 top의 y축의 거리
-        if (window.scrollY > 300) {
-            setUpDown(true); // down (보인다)
-        } else {
-            setUpDown(false); // up (안보인다)
-        }
-    };
+    const [upDown, setUpDown] = useState(false);
 
     useEffect(() => {
-        // window에 scroll 이벤트를 넣는다.
-        window.addEventListener("scroll", handleScroll);
-        // 페이지를 벗어날 때 이벤트를 제거한다.
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
+        const handleScroll = () => {
+            setUpDown(window.scrollY > 300);
         };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const topHandler = (e) => {
@@ -39,23 +27,18 @@ function Footer() {
 
 
 
-    // family site
-    const [isSwitched, setIsSwitced] = useState(false);
-    const familyHandler = () => {
-        setIsSwitced(!isSwitched);
-    };
+    const [isSwitched, setIsSwitched] = useState(false);
+    const familyHandler = () => setIsSwitched(prev => !prev);
 
-    const [isSwitched2, setIsSwitced2] = useState(false);
-    const familyHandler2 = () => {
-        setIsSwitced2(!isSwitched2);
-    };
+    const [isSwitched2, setIsSwitched2] = useState(false);
+    const familyHandler2 = () => setIsSwitched2(prev => !prev);
         
 
     return (
         <footer>
-            <a className={"top_move " + (upDown ? "down" : "up")} href="#" onClick={topHandler}>
+            <button className={"top_move " + (upDown ? "down" : "up")} onClick={topHandler}>
                 <FaAnglesUp className="topMenuIcon"/>
-            </a>
+            </button>
 
             <div className="footerInner">
                 <div className="top">
@@ -118,7 +101,7 @@ function Footer() {
                 
                 <div className="bottomWrap">
                     <div className="logoSnS">
-                        <a href='#'><img src={logo} alt='사이트 로고' /></a>
+                        <img src={logo} alt='사이트 로고' />
                         <div className='sns'>
                             <a href='https://www.youtube.com/c/%ED%95%9C%EA%B5%AD%EC%B2%A0%EB%8F%84TV' target="_blank" rel="noopener noreferrer"><span><FaYoutube /></span></a>
                             <a href='https://www.facebook.com/KoreaRailroad' target="_blank" rel="noopener noreferrer"><span><FaFacebook /></span></a>

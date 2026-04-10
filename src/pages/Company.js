@@ -33,14 +33,14 @@ CustomTabPanel.propTypes = {
 };
 
 
- function Company(index) {
+function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
     'aria-controls': `simple-tabpanel-${index}`,
   };
 }
 
-export default function ComTab() {
+export default function Company() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -58,9 +58,9 @@ export default function ComTab() {
       <Box>
         <Box sx={{ margin:'0 auto', textAlign:'center'}}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}} label="경영가치체계" {...Company(0)} />
-            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}}  label="우리들의 이야기" {...Company(1)} />
-            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}}  label="찾아오시는 길" {...Company(2)} />
+            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}} label="경영가치체계" {...a11yProps(0)} />
+            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}}  label="우리들의 이야기" {...a11yProps(1)} />
+            <Tab sx={{width:'40%',fontSize:'1.2rem', fontWeight:'500'}}  label="찾아오시는 길" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>

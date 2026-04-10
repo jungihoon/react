@@ -48,17 +48,6 @@ function Section6() {
   };
 
 
-  // selectBox에 Mui comboBox 적용
-  <Autocomplete
-  options={uniqueDep}
-  value={departure}
-  onChange={(event, newValue) => setDeparture(newValue)}
- 
-  renderInput={(params) => (
-    <TextField {...params} variant="outlined" />
-  )}
-/>
-
   return (
     <section className="fee">
       <h3 className="hidden">열차운임조회</h3>

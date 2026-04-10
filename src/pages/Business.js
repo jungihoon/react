@@ -30,60 +30,23 @@ function a11yProps(index) {
 
 function Business() {
   const [value, setValue] = React.useState(0);
-
-  // json 땡겨오기 //
-  // 여객
   const [passenger, setPassenger] = useState([]);
-  useEffect(() => {
-    fetch("/Business_passenger.json", { cache: "no-store" })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("네트워크 응답이 올바르지 않습니다.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setPassenger(data);
-      })
-      .catch((error) => {
-        console.error("JSON 데이터를 불러오는 도중 에러 발생:", error);
-      });
-  }, []);
-
-  // 광역
   const [wide, setWide] = useState([]);
-  useEffect(() => {
-    fetch("/Business_wide.json", { cache: "no-store" })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("네트워크 응답이 올바르지 않습니다.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setWide(data);
-      })
-      .catch((error) => {
-        console.error("JSON 데이터를 불러오는 도중 에러 발생:", error);
-      });
-  }, []);
-
-  // 물류
   const [coupang, setCoupang] = useState([]);
+
   useEffect(() => {
-    fetch("/Business_coupang.json", { cache: "no-store" })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("네트워크 응답이 올바르지 않습니다.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setCoupang(data);
-      })
-      .catch((error) => {
-        console.error("JSON 데이터를 불러오는 도중 에러 발생:", error);
-      });
+    const fetchJson = (url, setter) =>
+      fetch(url, { cache: "no-store" })
+        .then((res) => {
+          if (!res.ok) throw new Error("네트워크 응답이 올바르지 않습니다.");
+          return res.json();
+        })
+        .then(setter)
+        .catch((err) => console.error(`${url} 로드 에러:`, err));
+
+    fetchJson("/Business_passenger.json", setPassenger);
+    fetchJson("/Business_wide.json", setWide);
+    fetchJson("/Business_coupang.json", setCoupang);
   }, []);
 
   const handleChange = (event, newValue) => {

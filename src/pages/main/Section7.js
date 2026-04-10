@@ -15,7 +15,7 @@ function Section7() {
                 <dd data-aos="fade-up">고객의 소리를 귀담아 듣고 서비스 개선으로 응답하겠습니다.</dd>
             </dl>
             <div className='box1' data-aos="fade-right">
-                <a href='https://info.korail.com/mbs/www/jsp/voc/fe/login/NR_loginForm.do' className='more' target='_blank'>고객의 소리 신청하기</a>
+                <a href='https://info.korail.com/mbs/www/jsp/voc/fe/login/NR_loginForm.do' className='more' target='_blank' rel="noreferrer">고객의 소리 신청하기</a>
                 <RiCustomerService2Fill className="icon"></RiCustomerService2Fill>
             </div>
         
